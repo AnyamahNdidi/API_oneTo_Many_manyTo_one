@@ -7,9 +7,16 @@ const peopleSchema = mongoose.Schema({
     type:String,
     require:true
   },
-  allfruit:[
-     type:mongoose.Schema.Types.ObjectId,
+  course:{
+    type:String,
+    require:true
+  },
+  person:[
+    {
+         type:mongoose.Schema.Types.ObjectId,
     ref:"fruits"
+    }
+    
   ]
    
   

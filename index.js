@@ -1,6 +1,7 @@
 require("./config/db")
 const express = require("express")
 const myRouter = require("./router/router")
+const peopleRouter = require("./router/peopleRouter")
 const cors = require("cors")
 
 const app = express()
@@ -13,6 +14,7 @@ app.get("/", (req, res)=>{
 app.use(cors({origin:"*"}))
 app.use(express.json())
 app.use("/api", myRouter)
+app.use("/people", peopleRouter)
 
 
 app.listen(port, ()=>{

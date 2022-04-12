@@ -4,9 +4,7 @@ const router = express.Router()
 
 const {creatFruit,getAllFrsuit,updateFrsuit, deleteFrsuit} = require("../controller/controller")
 
-router.post("/post", creatFruit)
-router.get("/", getAllFrsuit)
-router.patch("/:id",updateFrsuit )
-router.delete("/:id",deleteFrsuit )
+router.post("/:personId/fruits", creatFruit)
+
 
 module.exports = router
